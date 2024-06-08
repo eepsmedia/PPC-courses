@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!--
+https://localhost/~tim/pluginSchool/demogg01local in local codap :
+http://localhost/~tim/codap/static/dg/en/cert/index.html?di=https://localhost/~tim/PCC/courses/Plugins-101-demography-portal/
+
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plugins 101</title>
+
+    <link rel='stylesheet' type='text/css' href='./demogg.css'/>
+
+    <!--
+    These three scripts take care of the communication with CODAP.
+    Note: iframe-phone has to come first!
+    -->
+    <script src="../common/iframe-phone.js"></script>
+    <script src="../common/codapInterface.js"></script>
+    <script src="../common/pluginHelper.js"></script>
+
+    <!--
+        <script src="../common/codap_helper_newAPI.js"></script>
+        <script src="../common/pluginLang.js"></script>
+    -->
+
+</head>
+<body>
+
+<h2>A plugin</h2>
+<div id="controls">
+    <input type="button" id="buttonGetData" value="get data">
+</div>
+<div id="status"></div>
+</body>
+
+<script type="module">
+    import {initialize} from "./demogg.js"
+
+    window.onload = function () {
+        initialize();
+    }
+</script>
+
+</html>
